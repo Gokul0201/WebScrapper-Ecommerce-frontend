@@ -1,0 +1,42 @@
+.loadpageConFluid {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    min-height: 100vh;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-image: url('/src/assets/unnamed.jpg');
+}
+
+.loadpageConFluid>.container {
+    padding-left:780px;
+    padding-top: 100px;
+}
+
+.loadpageConFluid>.container>p {
+    font-family: 'times new roman';
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    padding-left:780px;
+    padding-top: 100px;
+}
+
+.loadpageBtns {
+    font-weight: bold;
+    display:flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding-left:780px;
+}
+
+.loadpageBtns>a {
+    font-weight: bold;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black;
+}
