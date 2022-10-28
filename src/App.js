@@ -4,8 +4,8 @@ import Dashboard from '../src/Components/Dashboard/Dashboard'
 import Login from '../src/Components/Login/Login'
 import Register from '../src/Components/Register/Register'
 import Card from './Components/Card/Card';
-import AddProduct from './Components/AddProduct/AddProduct';
 import LoadPage from './Components/LoadPage/LoadPage';
+import Cards from './Components/Card/Cards';
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
           <Route path="/" element={<LoadPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/allproducts" element={<Dashboard />} />
+          <Route path="/card" element={<Cards/>} />
           <Route path="/register" element={<Register />} />
-          <Route path="/addproduct" element={<AddProduct />} />
         </Routes>
       </BrowserRouter>
     </div>

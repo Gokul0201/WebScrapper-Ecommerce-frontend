@@ -40,7 +40,7 @@ const Register = () => {
 
         onSubmit: async (values, { resetForm }) => {
             try {
-                let postData = await axios.post(`${config.api}/register`, values)
+                let postData = await axios.post(`${config.api}/users/register`, values)
                 resetForm({ values: '' })
                 toast.success(postData.data.message)
                 setTimeout(() => {

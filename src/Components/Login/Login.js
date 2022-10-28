@@ -39,13 +39,14 @@ const Login = () => {
 
         onSubmit: async (values, { resetForm }) => {
             try {
-                const login = await axios.post(`${config.api}/login`, values)
-                localStorage.setItem("login_auth_token", login.data.token)
+                const login = await axios.post(`${config.api}/users/login`, values)
+                sessionStorage.setItem("login_auth_token", login.data.token)
                 resetForm({ values: '' })
                 toast.success(login.data.message)
+                if (login.data.message === "User Logged in Successfully"){
                 setTimeout(() => {
                     navigate("/allproducts")
-                }, 3000)
+                }, 3000)}
 
             } catch (error) {
                 console.log(error);
@@ -57,6 +58,8 @@ const Login = () => {
     const handlePassShown = () => {
         showPass === false ? setShowPass(true) : setShowPass(false)
     }
+
+    
 
     return (
         <div className="container-fluid loginConFluid">

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faRightFromBracket, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useState } from 'react'
-import Card from '../Card/Card'
+import Cards from '../Card/Cards'
 import { Link, useNavigate } from 'react-router-dom'
 import './Dashboard.css'
 import axios from 'axios'
@@ -18,30 +18,30 @@ const Dashboard = () => {
     const [keyword, setKeyword] = useState('')
 
 
-    useEffect(() => {
-        let fetchData = async () => {
-            try {
-                let getData = await axios.get(`${config.api}/allproducts`, {
-                    headers: {
-                        "authorization": `${localStorage.getItem("login_auth_token")}`
-                    }
-                })
-                setProdData(getData.data)
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        fetchData()
-    }, [])
+    // useEffect(() => {
+    //     let fetchData = async () => {
+    //         try {
+    //             let getData = await axios.get(`${config.api}/allproducts`, {
+    //                 headers: {
+    //                     "authorization": `${localStorage.getItem("login_auth_token")}`
+    //                 }
+    //             })
+    //             setProdData(getData.data)
+    //         } catch (error) {
+    //             console.log(error);
+    //         }
+    //     }
+    //     fetchData()
+    // }, [])
 
     const handleInputText = (value) => {
         setKeyword(value)
     }
 
-    const filterProducts = prodData.filter((product) =>
-        product.prod_name.toLowerCase().includes(keyword) ||
-        product.prod_cat.toLowerCase().includes(keyword)
-    )
+    // const filterProducts = prodData.filter((product) =>
+    //     product.prod_name.toLowerCase().includes(keyword) ||
+    //     product.prod_cat.toLowerCase().includes(keyword)
+    // )
 
     return (
         <div className="container-fluid dashConFluid">
@@ -54,11 +54,11 @@ const Dashboard = () => {
                         <button><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
                     </div>
                     <div className='add_prod_btn'>
-                        <Link to="/addproduct" className='btn btn-warning'><strong>ADD PRODUCT <FontAwesomeIcon icon={faCirclePlus} /></strong></Link>
+                        {/* <Link to="/addproduct" className='btn btn-warning'><strong>ADD PRODUCT <FontAwesomeIcon icon={faCirclePlus} /></strong></Link> */}
                         <button onClick={handleLogout} className='btn btn-danger ms-2'><b>Logout</b> <FontAwesomeIcon icon={faRightFromBracket} /></button>
                     </div>
                 </div>
-                <Card filterProducts={filterProducts} />
+                <Cards />
             </div>
         </div>
     )
