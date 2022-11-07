@@ -3,7 +3,6 @@ import './App.css';
 import Dashboard from '../src/Components/Dashboard/Dashboard'
 import Login from '../src/Components/Login/Login'
 import Register from '../src/Components/Register/Register'
-import Card from './Components/Card/Card';
 import LoadPage from './Components/LoadPage/LoadPage';
 import Cards from './Components/Card/Cards';
 

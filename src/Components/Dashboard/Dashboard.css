@@ -63,24 +63,10 @@ h6 {
     margin-left: -35px;
 }
 
-.add_prod_btn>a {
-    font-family: 'Rancho', cursive;
-    letter-spacing: 1px;
-    transition: transform 200ms ease-in-out;
+.add_prod_btn{
+    margin-left:73rem ;
 }
 
-.add_prod_btn>a:active {
-    transform: scale(0.92);
-}
-
-.add_prod_btn>button {
-    font-family: 'Play', sans-serif;
-    transition: transform 200ms ease-in-out;
-}
-
-.add_prod_btn>button:active {
-    transform: scale(0.92);
-}
 
 
 @media screen and (max-width: 992px) {

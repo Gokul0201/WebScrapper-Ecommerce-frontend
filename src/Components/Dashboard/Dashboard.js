@@ -47,15 +47,15 @@ const Dashboard = () => {
         <div className="container-fluid dashConFluid">
             <div className="container">
                 <h1>Web Scraper</h1>
-                <h6>Search to compare products & find a best deals here!</h6>
+                <h6>Compare products & find a best deals here!</h6>
                 <div className="searchContainer">
-                    <div className="searchBar">
+                    {/* <div className="searchBar">
                         <input type="text" placeholder='Search to filter products' onChange={(e) => handleInputText(e.target.value.toLowerCase().trim())} />
                         <button><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-                    </div>
+                    </div> */}
                     <div className='add_prod_btn'>
                         {/* <Link to="/addproduct" className='btn btn-warning'><strong>ADD PRODUCT <FontAwesomeIcon icon={faCirclePlus} /></strong></Link> */}
-                        <button onClick={handleLogout} className='btn btn-danger ms-2'><b>Logout</b> <FontAwesomeIcon icon={faRightFromBracket} /></button>
+                        <button onClick={handleLogout} className='btn btn-danger ms-2 '><b>Logout</b> <FontAwesomeIcon icon={faRightFromBracket} /></button>
                     </div>
                 </div>
                 <Cards />

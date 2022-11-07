@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Pagination from "react-bootstrap/Pagination";
 import {config} from '../../config'
+import './Card.css'
 
 function Cards() {
   let [active, setActive] = useState(1);
