@@ -1,3 +1,3 @@
 export const config = {
-    api: 'https://web-scrapping-hackathon.herokuapp.com'
+    api: 'https://web-scrapping-xotu.onrender.com'
 }
